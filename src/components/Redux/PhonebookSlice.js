@@ -26,10 +26,10 @@ export const phonebookSlice = createSlice({
   },
 });
 
-console.log(phonebookSlice);
-console.log(phonebookSlice.actions);
-console.log(phonebookSlice.name);
-console.log(phonebookSlice.reducer);
+// console.log(phonebookSlice);
+// console.log(phonebookSlice.actions);
+// console.log(phonebookSlice.name);
+// console.log(phonebookSlice.reducer);
 
 export const { addItemContact, removeItemContact, filteredContact } =
   phonebookSlice.actions;
