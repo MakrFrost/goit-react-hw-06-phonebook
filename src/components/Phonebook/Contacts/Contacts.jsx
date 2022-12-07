@@ -16,7 +16,6 @@ const Contacts = () => {
     item.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-  // console.log(items);
   const dispatch = useDispatch();
 
   return (

@@ -21,11 +21,6 @@ export const phonebookSlice = createSlice({
   },
 });
 
-// console.log(phonebookSlice);
-// console.log(phonebookSlice.actions);
-// console.log(phonebookSlice.name);
-// console.log(phonebookSlice.reducer);
-
 export const { addItemContact, removeItemContact, filteredContact } =
   phonebookSlice.actions;
 
@@ -35,6 +30,7 @@ export const getFilter = state => state.contacts.filter;
 const persistConfig = {
   key: 'root',
   storage,
+  blacklist: ['filter'],
 };
 
 export const persistedReducers = persistReducer(
