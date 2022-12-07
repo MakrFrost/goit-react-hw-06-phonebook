@@ -17,7 +17,7 @@ const Contacts = () => {
   );
 
   // console.log(items);
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   return (
     <ul>
