@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { getFilter, filteredContact } from '../Redux/PhonebookSlice';
+
 // css
 
-function Filter({ filter, onFilterChange }) {
+function Filter() {
+  const filter = useSelector(getFilter);
+  const dispatch = useDispatch();
+
   return (
     <div>
       <label>
@@ -9,7 +15,7 @@ function Filter({ filter, onFilterChange }) {
         <input
           type="text"
           value={filter}
-          onChange={event => onFilterChange(event.target.value)}
+          onChange={event => dispatch(filteredContact(event.target.value))}
         />
       </label>
     </div>
